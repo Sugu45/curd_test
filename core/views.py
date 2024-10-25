@@ -53,6 +53,7 @@ def author_get(request):
                 'total_items': user_data_count,
                 'has_next': has_next,
 
+
                 'has_pervious': has_pervious}
 
         return JsonResponse(data,safe=False)
