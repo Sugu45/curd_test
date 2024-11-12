@@ -43,7 +43,7 @@ def author_get(request):
         author_data=Author.objects.filter(conditions)[offset:offset+page_size]
         author_ser=author_serlizer(author_data,many=True).data
         user_data_count = Author.objects.filter(conditions).count()
-        total_pages = (user_data_count + page_size - 1) // page_size
+        total_pages = (user_data_count+page_size-1)//page_size
         has_next = current_page < total_pages
         has_pervious = current_page > 1
         data = {"data": author_ser,
