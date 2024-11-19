@@ -11,3 +11,4 @@ class book_serlizer(serializers.ModelSerializer):
         model=Book
         fields='__all__'
 
+
